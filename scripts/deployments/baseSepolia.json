@@ -1,0 +1,14 @@
+{
+  "network": "baseSepolia",
+  "timestamp": "2025-10-12T21:07:55.139Z",
+  "deployer": "0xB0ba9c4fC93878d1CE7cEDC6663b3583805D91aF",
+  "contracts": {
+    "StudyToken": "0x168642d941b4405f628300433Bd8cAb617F4D0d1",
+    "StudyAchievements": "0xd959F150F840475127469a6b64134b96CD2f3842",
+    "StudyStaking": "0xD72aac2c040f2084FAB4D545489Aa74626A66F4C",
+    "StudySubscription": "0x3D14931F7E902D4e4C303939d260d2560Ae9f75E"
+  },
+  "chainId": 84532,
+  "rpcUrl": "https://sepolia.base.org",
+  "blockExplorer": "https://sepolia.basescan.org"
+}

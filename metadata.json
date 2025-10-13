@@ -1,0 +1,7 @@
+{
+  "name": "Copy of AI Study Group Nexus",
+  "description": "An interactive virtual study room where medical and pharmacy students can engage in dynamic voice conversations with a personalized team of AI tutors. Upload study materials, participate in live discussions, and receive detailed summaries to enhance your learning experience.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
