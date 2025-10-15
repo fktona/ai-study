@@ -66,40 +66,40 @@ const ConnectWalletScreen: React.FC<ConnectWalletScreenProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-white dark:bg-slate-900 flex items-center justify-center p-4 sm:p-6">
       <div className="w-full max-w-4xl">
         {/* Main Card */}
-        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-8 text-center">
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-4 sm:p-6 lg:p-8 text-center">
           {/* Header */}
-          <div className="mb-8">
-            <div className="w-16 h-16 bg-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-              <Wallet className="w-8 h-8 text-white" />
+          <div className="mb-6 sm:mb-8">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 rounded-2xl mx-auto mb-4 sm:mb-6 flex items-center justify-center">
+              <Wallet className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
             </div>
 
-            <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+            <h1 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2">
               Connect Wallet
             </h1>
-            <p className="text-slate-600 dark:text-slate-300 text-sm">
+            <p className="text-slate-600 dark:text-slate-300 text-sm px-2">
               Choose your wallet to access AI Study Nexus
             </p>
           </div>
 
           {/* Features */}
-          <div className="space-y-3 mb-8">
+          <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
             <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
-              <div className="w-5 h-5 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+              <div className="w-5 h-5 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center flex-shrink-0">
                 <CheckCircle className="w-3 h-3 text-green-600 dark:text-green-400" />
               </div>
               <span className="text-sm">AI-powered tutoring</span>
             </div>
             <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
-              <div className="w-5 h-5 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+              <div className="w-5 h-5 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center flex-shrink-0">
                 <CheckCircle className="w-3 h-3 text-blue-600 dark:text-blue-400" />
               </div>
               <span className="text-sm">Earn tokens for studying</span>
             </div>
             <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
-              <div className="w-5 h-5 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+              <div className="w-5 h-5 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center flex-shrink-0">
                 <CheckCircle className="w-3 h-3 text-purple-600 dark:text-purple-400" />
               </div>
               <span className="text-sm">NFT achievements</span>
@@ -122,22 +122,22 @@ const ConnectWalletScreen: React.FC<ConnectWalletScreenProps> = ({
           )}
 
           {/* Wallet Options Grid */}
-          <div className="grid grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
             {connectors.map((connector) => (
               <button
                 key={connector.uid}
                 onClick={() => handleConnect(connector)}
                 disabled={isPending || isConnecting}
-                className="group bg-slate-50 dark:bg-slate-700 hover:bg-blue-50 dark:hover:bg-blue-900/20 border border-slate-200 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-700 rounded-xl p-6 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex flex-col items-center gap-3"
+                className="group bg-slate-50 dark:bg-slate-700 hover:bg-blue-50 dark:hover:bg-blue-900/20 border border-slate-200 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-700 rounded-xl p-3 sm:p-4 lg:p-6 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex flex-col items-center gap-2 sm:gap-3 min-h-[120px] sm:min-h-[140px]"
               >
-                <div className="w-12 h-12 bg-white dark:bg-slate-600 rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white dark:bg-slate-600 rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
                   {getWalletIcon(connector.name)}
                 </div>
-                <div className="text-center">
-                  <div className="font-semibold text-sm text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                <div className="text-center flex-1 flex flex-col justify-center">
+                  <div className="font-semibold text-xs sm:text-sm text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 leading-tight">
                     {connector.name}
                   </div>
-                  <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  <div className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-tight">
                     {getWalletDescription(connector.name)}
                   </div>
                 </div>
@@ -151,10 +151,10 @@ const ConnectWalletScreen: React.FC<ConnectWalletScreenProps> = ({
           </div>
 
           {/* Security Note */}
-          <div className="mt-6 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-xl">
+          <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-slate-50 dark:bg-slate-700/50 rounded-xl">
             <div className="flex items-center gap-3">
-              <Shield className="w-4 h-4 text-slate-500 dark:text-slate-400" />
-              <p className="text-xs text-slate-600 dark:text-slate-300">
+              <Shield className="w-4 h-4 text-slate-500 dark:text-slate-400 flex-shrink-0" />
+              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 Your wallet connection is secure. We never access your private
                 keys.
               </p>
@@ -162,7 +162,7 @@ const ConnectWalletScreen: React.FC<ConnectWalletScreenProps> = ({
           </div>
 
           {/* Footer */}
-          <div className="mt-6 pt-4 border-t border-slate-200 dark:border-slate-600/50">
+          <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-slate-200 dark:border-slate-600/50">
             <div className="flex items-center justify-center gap-2 text-xs text-slate-500 dark:text-slate-400">
               <Sparkles className="w-4 h-4" />
               <span>Powered by Base Sepolia</span>

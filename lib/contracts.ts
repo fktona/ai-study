@@ -10,6 +10,9 @@ export const CONTRACT_ADDRESSES = {
       StudySubscription: "0x2C1524d83daDd2Cf51C8C1e1D087333581c4dDCC",
       StudyTokenShop: "0x0f3E353B65eFEe59551fEa9689B77C74C1E7423c",
       SessionManager: "0xBb87f967c583584E8FAB264B14aC090C18258bc2",
+      // Base Names contracts
+      BaseNamesRegistrarController: "0x4cCb0BB02FCABA27e82a56646E81d8c5bC4119a5",
+      BaseNamesL2Resolver: "0xC6d566A56A1aFf6508b41f6c90ff131615583BCD",
     },
 };
 
