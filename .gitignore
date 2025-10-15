@@ -23,3 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 npm run dev
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.test.local
+.env.test.local.example
+.env.test.local.example.
